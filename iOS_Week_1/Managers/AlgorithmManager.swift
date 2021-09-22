@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AlgoruthmManager: AlgorithmProtocol {
+class AlgorithmManager: AlgorithmProtocol {
     
     // MARK: - Two Sum
     /*
@@ -27,8 +27,15 @@ class AlgoruthmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        // I solved of the question for you guys :D :D :D
-        return [0, 1]
+        for i in 0..<nums.count {
+            for j in i+1..<nums.count {
+                if (nums[i] + nums[j] == target) {
+                    return [i, j]
+                }
+            }
+        }
+        
+        return [0, 0]
     }
     
     // MARK: - IsPalindrome
