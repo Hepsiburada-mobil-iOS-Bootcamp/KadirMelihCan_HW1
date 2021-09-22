@@ -20,10 +20,11 @@ class AlgorithmViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.algorithmManager = AlgorithmManager()
     }
     
     @IBAction func twoSumAction(_ sender: Any) {
-        // algorithmManager.twoSumTest()
+        algorithmManager.twoSumTest()
     }
     
     @IBAction func isPalindromAction(_ sender: Any) {
