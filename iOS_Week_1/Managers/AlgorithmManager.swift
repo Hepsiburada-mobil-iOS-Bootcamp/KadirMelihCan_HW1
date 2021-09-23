@@ -137,12 +137,25 @@ class AlgorithmManager: AlgorithmProtocol {
      Output: [2,2]
      */
     func arrayIntersectionTest() {
+        let nums1: [Int] = [1,2,2,1]
+        let nums2: [Int] = [2,2]
         
+        print(intersect(nums1, nums2))
     }
     
-//    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-//
-//    }
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        var numberSet = Set(nums1)
+        var result: [Int] = []
+                
+        for num in nums2 {
+            if numberSet.contains(num) {
+                result.append(num)
+                numberSet.remove(num)
+            }
+        }
+                
+        return result
+    }
     
     // MARK: - Missing Number
     /*

@@ -48,7 +48,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func arrayIntersectionAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.arrayIntersectionTest()
     }
     
 }
