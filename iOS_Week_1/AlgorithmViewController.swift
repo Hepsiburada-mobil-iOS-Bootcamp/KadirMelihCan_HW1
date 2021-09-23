@@ -40,7 +40,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func mergeArrayAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.mergeArraysTest()
     }
     
     @IBAction func missingNumberAction(_ sender: Any) {
