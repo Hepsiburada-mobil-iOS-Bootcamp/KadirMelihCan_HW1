@@ -167,12 +167,22 @@ class AlgorithmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
+        let nums: [Int] = [3,0,1]
         
+        print(missingNumber(nums))
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
-    
+    private func missingNumber(_ nums: [Int]) -> Int {
+        guard let min = nums.min() else { return 0 }
+        guard let max = nums.max() else { return 0 }
+        
+        for num in min...max {
+            if !nums.contains(num) {
+                return num
+            }
+        }
+        
+        return 0
+    }
     
 }
