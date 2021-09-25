@@ -22,6 +22,10 @@
 		A7CF0A8126F7CECE0049FA45 /* SampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */; };
 		A7CF0A8326F7CED40049FA45 /* SampleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */; };
 		A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */; };
+		D41A802926FE6A9C0019D293 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A802826FE6A9C0019D293 /* Animal.swift */; };
+		D41A802B26FEFFD10019D293 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A802A26FEFFD10019D293 /* Dog.swift */; };
+		D41A802D26FF01050019D293 /* VehicleTransmissionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A802C26FF01050019D293 /* VehicleTransmissionEnum.swift */; };
+		D41A802F26FF01520019D293 /* MovieStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A802E26FF01520019D293 /* MovieStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleClass.swift; sourceTree = "<group>"; };
 		A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStruct.swift; sourceTree = "<group>"; };
 		A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEnum.swift; sourceTree = "<group>"; };
+		D41A802826FE6A9C0019D293 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Animal.swift; path = Animals/Animal.swift; sourceTree = "<group>"; };
+		D41A802A26FEFFD10019D293 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dog.swift; path = Animals/Dog.swift; sourceTree = "<group>"; };
+		D41A802C26FF01050019D293 /* VehicleTransmissionEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTransmissionEnum.swift; sourceTree = "<group>"; };
+		D41A802E26FF01520019D293 /* MovieStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,10 @@
 				A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */,
 				A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */,
 				A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */,
+				D41A802826FE6A9C0019D293 /* Animal.swift */,
+				D41A802A26FEFFD10019D293 /* Dog.swift */,
+				D41A802C26FF01050019D293 /* VehicleTransmissionEnum.swift */,
+				D41A802E26FF01520019D293 /* MovieStruct.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -295,11 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41A802926FE6A9C0019D293 /* Animal.swift in Sources */,
 				A7CF0A7526F7C0680049FA45 /* AlgorithmViewController.swift in Sources */,
+				D41A802B26FEFFD10019D293 /* Dog.swift in Sources */,
+				D41A802F26FF01520019D293 /* MovieStruct.swift in Sources */,
 				A7CF0A7826F7C5EB0049FA45 /* AlgorithmManager.swift in Sources */,
 				A7CF0A4526F7BEBF0049FA45 /* ViewController.swift in Sources */,
 				A7CF0A4B26F7BEBF0049FA45 /* iOS_Week_1.xcdatamodeld in Sources */,
 				A7CF0A8326F7CED40049FA45 /* SampleStruct.swift in Sources */,
+				D41A802D26FF01050019D293 /* VehicleTransmissionEnum.swift in Sources */,
 				A7CF0A8126F7CECE0049FA45 /* SampleClass.swift in Sources */,
 				A7CF0A4126F7BEBF0049FA45 /* AppDelegate.swift in Sources */,
 				A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */,
