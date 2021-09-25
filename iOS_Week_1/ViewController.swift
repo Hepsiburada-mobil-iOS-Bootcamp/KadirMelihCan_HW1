@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         let structObj = SampleStruct(title: "title", subTitle: "subTitle")
         let classObj = SampleClass(name: "name", surName: "surname").setTitleObject(by: structObj)
         classObj.display()
+        
+        let dog = Dog.init(name: "John", age: 3)
+        let dogAge = dog.getAge()
     }
 
     
