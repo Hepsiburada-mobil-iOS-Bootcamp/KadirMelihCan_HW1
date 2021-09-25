@@ -20,34 +20,35 @@ class AlgorithmViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.algorithmManager = AlgorithmManager()
     }
     
     @IBAction func twoSumAction(_ sender: Any) {
-        // algorithmManager.twoSumTest()
+        algorithmManager.twoSumTest()
     }
     
     @IBAction func isPalindromAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.isPalindromTest()
     }
     
     @IBAction func AnagramAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.isAnagramTest()
     }
     
     @IBAction func duplicationAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.duplicateTest()
     }
     
     @IBAction func mergeArrayAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.mergeArraysTest()
     }
     
     @IBAction func missingNumberAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.missingNumberTest()
     }
     
     @IBAction func arrayIntersectionAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.arrayIntersectionTest()
     }
     
 }

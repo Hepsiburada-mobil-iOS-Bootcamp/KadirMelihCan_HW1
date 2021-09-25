@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AlgoruthmManager: AlgorithmProtocol {
+class AlgorithmManager: AlgorithmProtocol {
     
     // MARK: - Two Sum
     /*
@@ -27,8 +27,15 @@ class AlgoruthmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        // I solved of the question for you guys :D :D :D
-        return [0, 1]
+        for i in 0..<nums.count {
+            for j in i+1..<nums.count {
+                if (nums[i] + nums[j] == target) {
+                    return [i, j]
+                }
+            }
+        }
+        
+        return [0, 0]
     }
     
     // MARK: - IsPalindrome
@@ -39,12 +46,15 @@ class AlgoruthmManager: AlgorithmProtocol {
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
     func isPalindromTest() {
-        
+        let s: String = "A man, a plan, a canal: Panama"
+        print(isPalindrome(s))
     }
     
-//    func isPalindrome(_ s: String) -> Bool {
-//
-//    }
+    func isPalindrome(_ s: String) -> Bool {
+        let regex = "[^A-Za-z0-9]"
+        let text = s.replacingOccurrences(of: regex, with: "", options: [.regularExpression]).lowercased()
+        return text == String(text.reversed())
+    }
     
     // MARK: - Valid Anagram
     /*
@@ -53,12 +63,14 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        
+        let s: String = "anagram"
+        let t: String = "nagaram"
+        print(isAnagram(s, t))
     }
     
-//    func isAnagram(_ s: String, _ t: String) -> Bool {
-//
-//    }
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        return s.lowercased().sorted().filter{$0 != " "} == t.lowercased().sorted().filter{$0 != " "}
+    }
     
     // MARK: - Contains Duplicate
     /*
@@ -69,12 +81,16 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
+        var nums: [Int] = [1, 2, 3, 1]
+        print(containsDuplicate(nums))
         
+        nums = [1, 2, 3, 4]
+        print(containsDuplicate(nums))
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        return nums.count > Set(nums).count
+    }
     
     // MARK: - Merge Sorted Array
     /*
@@ -89,11 +105,28 @@ class AlgoruthmManager: AlgorithmProtocol {
      The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
      */
     func mergeArraysTest() {
+        var nums1: [Int] = [1,2,3,0,0,0]
+        let nums2: [Int] = [2,5,6]
+        let m: Int = 3
+        let n: Int = 3
+        merge(&nums1, m, nums2, n)
         
+        print(nums1)
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
-            
+        var i = m - 1, j = n - 1
+
+        //i=2 j=2
+        while i >= 0 || j >= 0 {
+            if j < 0 || (i >= 0 && nums1[i] > nums2[j]) {
+                nums1[i + j + 1] = nums1[i]
+                i -= 1
+            } else {
+                nums1[i + j + 1] = nums2[j]
+                j -= 1
+            }
+        }
     }
     
     // MARK: - Intersection of Two Arrays
@@ -104,12 +137,25 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: [2,2]
      */
     func arrayIntersectionTest() {
+        let nums1: [Int] = [1,2,2,1]
+        let nums2: [Int] = [2,2]
         
+        print(intersect(nums1, nums2))
     }
     
-//    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-//
-//    }
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        var numberSet = Set(nums1)
+        var result: [Int] = []
+                
+        for num in nums2 {
+            if numberSet.contains(num) {
+                result.append(num)
+                numberSet.remove(num)
+            }
+        }
+                
+        return result
+    }
     
     // MARK: - Missing Number
     /*
@@ -121,12 +167,22 @@ class AlgoruthmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
+        let nums: [Int] = [3,0,1]
         
+        print(missingNumber(nums))
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
-    
+    private func missingNumber(_ nums: [Int]) -> Int {
+        guard let min = nums.min() else { return 0 }
+        guard let max = nums.max() else { return 0 }
+        
+        for num in min...max {
+            if !nums.contains(num) {
+                return num
+            }
+        }
+        
+        return 0
+    }
     
 }
